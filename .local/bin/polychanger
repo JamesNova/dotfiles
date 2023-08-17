@@ -1,0 +1,20 @@
+#! /bin/sh
+
+source ~/.session
+
+echo "Interchanging Polybars..."
+
+mv ~/.config/polybar ~/.config/polybar.bak1
+mv ~/.config/polybar.bak ~/.config/polybar
+mv ~/.config/polybar.bak1 ~/.config/polybar.bak
+
+polythemer
+
+case $SESSION in
+    awesome)
+        echo 'awesome.restart()' | awesome-client
+    ;;
+    *)
+        echo "Done, now restart your WM"
+    ;;
+esac

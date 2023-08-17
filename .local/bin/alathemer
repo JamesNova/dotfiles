@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+config="$HOME/.config/alacritty/alacritty.yml"
+source ~/.theme
+
+if [[ "$theme" = Quit ]]; then
+  echo "No Theme Chosen" && exit 1
+elif [[ "$theme" = Dracula ]]; then
+  sed -i '/colors: /c\colors: *dracula' $config
+elif [[ "$theme" = Gruvbox ]]; then
+  sed -i '/colors: /c\colors: *gruvbox-dark' $config
+elif [[ "$theme" = Monokai-Pro ]]; then
+  sed -i '/colors: /c\colors: *monokai-pro' $config
+elif [[ "$theme" = Nord ]]; then
+  sed -i '/colors: /c\colors: *nord' $config
+elif [[ "$theme" = TokyoNight ]]; then
+  sed -i '/colors: /c\colors: *tokyo-night' $config
+fi

@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+source ~/.theme
+
+if [[ "$theme" = Quit ]]; then
+  echo "No Theme Chosen" && exit 1
+elif [[ "$theme" = Dracula ]]; then
+        feh --randomize --bg-fill /usr/share/backgrounds/dracula/*.jpg /usr/share/backgrounds/dracula/*.jpeg /usr/share/backgrounds/dracula/*.png
+elif [[ "$theme" = Gruvbox ]]; then
+        feh --randomize --bg-fill /usr/share/backgrounds/gruvbox/*.jpg /usr/share/backgrounds/gruvbox/*.jpeg /usr/share/backgrounds/gruvbox/*.png
+elif [[ "$theme" = Monokai-Pro ]]; then
+        feh --randomize --bg-fill /usr/share/backgrounds/monokai-pro/*.jpg /usr/share/backgrounds/monokai-pro/*.jpeg /usr/share/backgrounds/monokai-pro/*.png
+elif [[ "$theme" = Nord ]]; then
+        feh --randomize --bg-fill /usr/share/backgrounds/nord/*.jpg /usr/share/backgrounds/nord/*.jpeg /usr/share/backgrounds/nord/*.png
+elif [[ "$theme" = TokyoNight ]]; then
+        feh --randomize --bg-fill /usr/share/backgrounds/tokyo-night/*.jpg /usr/share/backgrounds/tokyo-night/*.jpeg /usr/share/backgrounds/tokyo-night/*.png
+fi

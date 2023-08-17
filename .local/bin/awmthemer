@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+config="$HOME/.config/awesome/rc.lua"
+source ~/.theme
+
+if [[ "$theme" = Quit ]]; then
+  echo "No Theme Chosen" && exit 1
+elif [[ "$theme" = Dracula ]]; then
+  sed -i '/beautiful.init/c\beautiful.init("~/.config/awesome/themes/dracula/theme.lua")' $config
+elif [[ "$theme" = Gruvbox ]]; then
+  sed -i '/beautiful.init/c\beautiful.init("~/.config/awesome/themes/gruvbox/theme.lua")' $config
+elif [[ "$theme" = Monokai-Pro ]]; then
+  sed -i '/beautiful.init/c\beautiful.init("~/.config/awesome/themes/monokai-pro/theme.lua")' $config
+elif [[ "$theme" = Nord ]]; then
+  sed -i '/beautiful.init/c\beautiful.init("~/.config/awesome/themes/nord/theme.lua")' $config
+elif [[ "$theme" = TokyoNight ]]; then
+  sed -i '/beautiful.init/c\beautiful.init("~/.config/awesome/themes/tokyo-night/theme.lua")' $config
+fi

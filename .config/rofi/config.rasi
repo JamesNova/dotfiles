@@ -1,0 +1,10 @@
+configuration {
+  display-drun: " ";
+  display-window: "Windows";
+  drun-display-format: "{icon} {name}";
+  show-icons: true;
+  icon-theme: "Papirus";
+  modi: "drun,run,window,emoji,calc";
+}
+
+@theme "~/.config/rofi/themes/nord-rounded.rasi"

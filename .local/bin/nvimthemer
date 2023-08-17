@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+config="$HOME/.config/nvim/after/plugin/colors.lua"
+source ~/.theme
+
+if [[ "$theme" = Quit ]]; then
+  echo "No Theme Chosen" && exit 1
+elif [[ "$theme" = Dracula ]]; then
+  sed -i '/color = /c\color = "dracula"' $config
+elif [[ "$theme" = Gruvbox ]]; then
+  sed -i '/color = /c\color = "gruvbox"' $config
+elif [[ "$theme" = Monokai-Pro ]]; then
+  sed -i '/color = /c\color = "monokai-pro"' $config
+elif [[ "$theme" = Nord ]]; then
+  sed -i '/color = /c\color = "nord"' $config
+elif [[ "$theme" = TokyoNight ]]; then
+  sed -i '/color = /c\color = "tokyonight"' $config
+fi

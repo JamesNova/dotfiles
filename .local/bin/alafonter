@@ -1,0 +1,45 @@
+#!/usr/bin/env bash
+
+config="$HOME/.config/alacritty/alacritty.yml"
+
+declare -a fonts=(
+"Source Code Pro"
+"RobotoMono Nerd"
+"Hack Nerd"
+"JetBrains Mono Nerd"
+"UbuntuMono Nerd"
+"TerminessTTF Nerd"
+"Mononoki Nerd"
+"Quit"
+)
+
+reset_fonts() {
+  sed -i 's/^    family: /    #family: /' $config
+}
+
+choice=$(printf '%s\n' "${fonts[@]}" | rofi -dmenu -i -p "Fonts ")
+
+if [[ "$choice" = quit ]]; then
+  echo "No Font Chosen" && exit 1
+elif [[ "$choice" = "Source Code Pro" ]]; then
+  reset_fonts
+  sed -i '/family: Source Code Pro/c\    family: Source Code Pro' $config
+elif [[ "$choice" = "RobotoMono Nerd" ]]; then
+  reset_fonts
+  sed -i '/family: RobotoMono Nerd Font/c\    family: RobotoMono Nerd Font' $config
+elif [[ "$choice" =  "Hack Nerd" ]]; then
+  reset_fonts
+  sed -i '/family: Hack Nerd Font/c\    family: Hack Nerd Font' $config
+elif [[ "$choice" = "JetBrains Mono Nerd" ]]; then
+  reset_fonts
+  sed -i '/family: JetBrains Mono Nerd Font/c\    family: JetBrains Mono Nerd Font' $config
+elif [[ "$choice" = "UbuntuMono Nerd" ]]; then
+  reset_fonts
+  sed -i '/family: UbuntuMono Nerd Font/c\    family: UbuntuMono Nerd Font' $config
+elif [[ "$choice" = "TerminessTTF Nerd" ]]; then
+  reset_fonts
+  sed -i '/family: TerminessTTF Nerd Font/c\    family: TerminessTTF Nerd Font' $config
+elif [[ "$choice" = "Mononoki Nerd" ]]; then
+  reset_fonts
+  sed -i '/family: Mononoki Nerd Font/c\    family: Mononoki Nerd Font' $config
+fi

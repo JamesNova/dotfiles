@@ -1,0 +1,37 @@
+[package]
+name = "raur"
+version = "5.0.1"
+authors = [
+    "David Bittner <bittneradave@gmail.com>",
+    "morganamilo <morganamilo@archlinux.org>",
+]
+
+description = "A simple wrapper to query the AUR RPC."
+documentation = "https://docs.rs/raur"
+repository = "https://www.gitlab.com/DavidBittner/raur"
+
+license = "MPL-2.0"
+keywords = ["aur", "rpc", "json", "archlinux", "arch"]
+edition = "2018"
+
+readme = "README.md"
+
+[features]
+default = ["reqwest/default", "async"]
+rustls = ["reqwest/rustls-tls"]
+blocking = ["reqwest/blocking"]
+async = ["async-trait"]
+
+[badges]
+gitlab = {repository = "DavidBittner/raur"}
+
+[dependencies]
+async-trait    = { version = "0.1.50", optional = true }
+reqwest        = { version = "0.11.3", default-features = false, features = ["json"] }
+serde          = "1.0.125"
+serde_derive   = "1.0.125"
+serde_json     = "1.0.64"
+url            = "2.2.1"
+
+[dev-dependencies]
+tokio = { version = "1.5.0", features = ["macros", "rt-multi-thread"] }

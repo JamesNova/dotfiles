@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+config="$HOME/.config/rofi/config.rasi"
+source ~/.theme
+
+if [[ "$theme" = Quit ]]; then
+  echo "No Theme Chosen" && exit 1
+elif [[ "$theme" = Dracula ]]; then
+  sed -i '/@theme /c\@theme "~/.config/rofi/themes/dracula-rounded.rasi"' $config
+elif [[ "$theme" = Gruvbox ]]; then
+  sed -i '/@theme /c\@theme "~/.config/rofi/themes/gruvbox-rounded.rasi"' $config
+elif [[ "$theme" = Monokai-Pro ]]; then
+  sed -i '/@theme /c\@theme "~/.config/rofi/themes/monokai-pro-rounded.rasi"' $config
+elif [[ "$theme" = Nord ]]; then
+  sed -i '/@theme /c\@theme "~/.config/rofi/themes/nord-rounded.rasi"' $config
+elif [[ "$theme" = TokyoNight ]]; then
+  sed -i '/@theme /c\@theme "~/.config/rofi/themes/tokyo-night-rounded.rasi"' $config
+fi
+

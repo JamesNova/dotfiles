@@ -1,0 +1,45 @@
+[package]
+name = "rss"
+version = "2.0.1"
+authors = ["James Hurst <jh.jameshurst@gmail.com>", "Corey Farwell <coreyf@rwell.org>", "Chris Palmer <pennstate5013@gmail.com>"]
+description = "Library for serializing the RSS web content syndication format"
+repository = "https://github.com/rust-syndication/rss"
+documentation = "https://docs.rs/rss/"
+license = "MIT/Apache-2.0"
+readme = "README.md"
+keywords = ["rss", "feed", "parser", "parsing"]
+include = ["src/*", "Cargo.toml", "LICENSE-MIT", "LICENSE-APACHE", "README.md"]
+edition = "2018"
+
+[package.metadata.docs.rs]
+all-features = false
+
+[features]
+default = ["builders"]
+builders = ["derive_builder", "never", "atom_syndication/builders"]
+validation = ["chrono", "chrono/std", "url", "mime"]
+with-serde = ["serde", "atom_syndication/with-serde"]
+atom = ["atom_syndication"]
+
+[dependencies]
+quick-xml = { version = "0.22", features = ["encoding"] }
+derive_builder = { version = "0.10.2", optional = true }
+never = { version = "0.1", optional = true }
+chrono = { version = "0.4", optional = true, default-features = false, features = ["alloc"] }
+url = { version = "2.1", optional = true }
+mime = { version = "0.3", optional = true }
+serde = { version = "1.0", optional = true, features = ["derive"] }
+atom_syndication = { version = "0.11", optional = true }
+
+[dev-dependencies]
+bencher = "0.1"
+
+[[bench]]
+name = "read"
+path = "benches/read.rs"
+harness = false
+
+[[bench]]
+name = "write"
+path = "benches/write.rs"
+harness = false

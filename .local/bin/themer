@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+
+source ~/.session
+
+declare -a themes=(
+"Dracula"
+"Gruvbox"
+"Monokai-Pro"
+"Nord"
+"TokyoNight"
+"Quit"
+)
+
+choice=$(printf '%s\n' "${themes[@]}" | rofi -dmenu -i -p "Themes ")
+if [[ -f "~/.theme" ]]; then
+    rm ~/.theme
+fi
+
+touch ~/.theme
+echo "#! /bin/sh" > ~/.theme
+echo "theme=$choice" > ~/.theme
+
+alathemer
+awmthemer
+nvimthemer
+polythemer
+rofithemer
+walltheme
+
+case $SESSION in
+    awesome)
+        echo 'awesome.restart()' | awesome-client
+    ;;
+    *)
+        echo "Done, now restart your WM"
+    ;;
+esac

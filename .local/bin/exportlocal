@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+sudo cp ~/.local/bin/* /bin/.
