@@ -21,7 +21,6 @@ echo "#! /bin/sh" > ~/.theme
 echo "theme=$choice" > ~/.theme
 
 alathemer
-awmthemer
 nvimthemer
 polythemer
 rofithemer
@@ -29,6 +28,7 @@ walltheme
 
 case $SESSION in
     awesome)
+        awmthemer
         echo 'awesome.restart()' | awesome-client
     ;;
     *)

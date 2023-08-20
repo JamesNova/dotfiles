@@ -14,11 +14,11 @@ command_exists() {
 }
 
 screen_resolution() {
-  xrandr --output DP-0 --mode 1920x1080 --rate 144
+    xrandr --output DP-0 --mode 1920x1080 --rate 144
 }
 
 start_pipewire() {
-    killall -p pipewire pulseaudio wireplumber
+    pkill pipewire && pkill pulseaudio && pkill wireplumber
     pipewire &
     pipewire-pulse &
     wireplumber &
@@ -77,6 +77,8 @@ case $SESSION in
     xmonad)
         screen_resolution
         nm-applet &
+    ;;
+    *)
     ;;
 esac
 

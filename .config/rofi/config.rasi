@@ -7,4 +7,4 @@ configuration {
   modi: "drun,run,window,emoji,calc";
 }
 
-@theme "~/.config/rofi/themes/nord-rounded.rasi"
+@theme "~/.config/rofi/themes/gruvbox-rounded.rasi"

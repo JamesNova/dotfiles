@@ -45,7 +45,7 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init("~/.config/awesome/themes/nord/theme.lua")
+beautiful.init("~/.config/awesome/themes/gruvbox/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "alacritty"
@@ -415,5 +415,7 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- Autostart
 awful.spawn.with_shell("~/.config/polybar/launch.sh")
 awful.spawn.with_shell("nm-applet")
-awful.spawn.with_shell("pulseaudio --start")
+awful.spawn.with_shell("pkill pulseaudio pipewire pipewire-pulse pipewire-alsa")
+-- awful.spawn.with_shell("pulseaudio --start")
+-- awful.spawn.with_shell("pulseaudio --start")
 awful.spawn.with_shell("pkill ncmpcpp | alacritty --class 'mus,mus' -e ncmpcpp")

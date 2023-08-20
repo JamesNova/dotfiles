@@ -253,7 +253,7 @@ tokyo-night: &tokyo-night
   # *solarized-light
   # *solarized-dark
 
-colors: *nord
+colors: *gruvbox-dark
 
 #######################################
 ##       END OF COLOR SCHEMES        ##

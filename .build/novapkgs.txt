@@ -24,6 +24,8 @@ unrar
 unzip
 base-devel
 xorg-xrandr
+lxsession
+lxappearance
 
 alsa-utils
 alsa-plugins

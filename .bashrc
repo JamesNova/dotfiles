@@ -17,9 +17,6 @@ export ALTERNATE_EDITOR=""                        # setting for emacsclient
 export EDITOR="nvim"                              # $EDITOR use Neovim in terminal
 export VISUAL="nvim"                              # $VISUAL use Neovim in GUI mode
 
-### SET MANPAGER
-### Uncomment only one of these!
-
 ### "bat" as manpager
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
@@ -107,27 +104,8 @@ ex ()
 
 ### ALIASES ###
 
+## Backup
 alias musbak="tar -cf ~/musicbak.tar.gz ~/Music"
-
-# navigation
-up () {
-  local d=""
-  local limit="$1"
-
-  # Default to limit of 1
-  if [ -z "$limit" ] || [ "$limit" -le 0 ]; then
-    limit=1
-  fi
-
-  for ((i=1;i<=limit;i++)); do
-    d="../$d"
-  done
-
-  # perform cd. Show error if cd fails
-  if ! cd "$d"; then
-    echo "Couldn't go up $limit dirs.";
-  fi
-}
 
 # vim
 alias v="vim"
@@ -213,4 +191,4 @@ alias fpc="fpc -Co -Cr -Miso -gl"
 pfetch
 
 ### SETTING THE STARSHIP PROMPT ###
-eval "$(starship init bash)"
+# eval "$(starship init bash)"
