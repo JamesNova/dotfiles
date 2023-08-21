@@ -3,4 +3,4 @@ ttf-ms-fonts
 pfetch
 betterlockscreen
 xinit-xsession
-gtk-themes-extra
+gnome-themes-extra

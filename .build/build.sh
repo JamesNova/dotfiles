@@ -27,28 +27,28 @@ esac
 read -p "Do you want to use (1)LightDM or (2)Ly ? " dm
 case $dm in
     1)
-        paru -S lightdm lighdm-webkit2-greeter lightdm-webkit2-theme-glorious
+        paru -S --needed lightdm lightdm-webkit2-greeter lightdm-webkit2-theme-glorious
         sudo systemctl enable lightdm
         sudo sed -i 's/^\(#?greeter\)-session\s*=\s*\(.*\)/greeter-session = lightdm-webkit2-greeter #\1/ #\2g' /etc/lightdm/lightdm.conf
         sudo sed -i 's/^webkit_theme\s*=\s*\(.*\)/webkit_theme = glorious #\1/g' /etc/lightdm/lightdm-webkit2-greeter.conf
         sudo sed -i 's/^debug_mode\s*=\s*\(.*\)/debug_mode = true #\1/g' /etc/lightdm/lightdm-webkit2-greeter.conf
-        sudo sed -i 's/^background_images\s*=\s*\(.*\)/background_images = /usr/share/backgrounds/tokyo-night #\1/g' /etc/lightdm/lightdm-webkit2-greeter.conf
+        # sudo sed -i 's/^background_images\s*=\s*\(.*\)/background_images = /usr/share/backgrounds/tokyo-night #\1/g' /etc/lightdm/lightdm-webkit2-greeter.conf
     ;;
     2)
         paru -S ly
         sudo systemctl enable ly
     ;;
     *)
-        echo "You need to input a numer... [1/2]"
+        echo "You need to input a number... [1/2]"
         read -p "Do you want to use (1)LightDM or (2)Ly ? " dm
         case $dm in
             1)
-                paru -S lightdm lighdm-webkit2-greeter lightdm-webkit2-theme-glorious
+                paru -S --needed lightdm lighdm-webkit2-greeter lightdm-webkit2-theme-glorious
                 sudo systemctl enable lightdm
                 sudo sed -i 's/^\(#?greeter\)-session\s*=\s*\(.*\)/greeter-session = lightdm-webkit2-greeter #\1/ #\2g' /etc/lightdm/lightdm.conf
                 sudo sed -i 's/^webkit_theme\s*=\s*\(.*\)/webkit_theme = glorious #\1/g' /etc/lightdm/lightdm-webkit2-greeter.conf
                 sudo sed -i 's/^debug_mode\s*=\s*\(.*\)/debug_mode = true #\1/g' /etc/lightdm/lightdm-webkit2-greeter.conf
-                sudo sed -i 's/^background_images\s*=\s*\(.*\)/background_images = /usr/share/backgrounds/tokyo-night #\1/g' /etc/lightdm/lightdm-webkit2-greeter.conf
+                # sudo sed -i 's/^background_images\s*=\s*\(.*\)/background_images = /usr/share/backgrounds/tokyo-night #\1/g' /etc/lightdm/lightdm-webkit2-greeter.conf
             ;;
             2)
                 paru -S ly
@@ -91,13 +91,13 @@ if [[ ! -d "$HOME/.local/bin" ]]; then
     mkdir -p $HOME/.local/bin
 fi
 
-mv novadots/.xinitrc .xinitrc
-mv novadots/.bashrc .bashrc
-mv novadots/.mpd .mpd
-mv novadots/Music Music
-mv novadots/.config .config
-mv novadots/.local/bin/* .local/bin/
-mv novadots/.session .session
+cp -rf novadots/.xinitrc .xinitrc
+cp -rf novadots/.bashrc .bashrc
+cp -rf novadots/.zshrc .zshrc
+cp -rf novadots/.mpd .mpd
+cp -rf novadots/.config .config
+cp -rf novadots/.local/bin/* .local/bin/
+cp -rf novadots/.session .session
 touch $HOME/.theme
 echo "theme=Nord" > $HOME/.theme
 
@@ -129,7 +129,7 @@ $HOME/.local/bin/rofithemer
 $HOME/.local/bin/polythemer
 
 hstname=$(cat /etc/hostname)
-sudo echo "$USER $hstname =NOPASSWD: /usr/bin/systemctl poweroff,/usr/bin/systemctl halt,/usr/bin/systemctl reboot" > /etc/sudoers
+# sudo echo "$USER $hstname =NOPASSWD: /usr/bin/systemctl poweroff,/usr/bin/systemctl halt,/usr/bin/systemctl reboot" > /etc/sudoers
 
 echo "Cleaning things out..."
 repocp=$(dirname $(sudo find / -iname novapkgs.txt -printf '%h'))
