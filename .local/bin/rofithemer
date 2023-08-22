@@ -1,19 +1,31 @@
 #!/usr/bin/env bash
 
-config="$HOME/.config/rofi/config.rasi"
+launcher="$HOME/.config/rofi/launcher.sh"
+powermenu="$HOME/.config/rofi/powermenu.sh"
+menu="$HOME/.config/rofi/menu.sh"
 source ~/.theme
 
 if [[ "$theme" = Quit ]]; then
   echo "No Theme Chosen" && exit 1
 elif [[ "$theme" = Dracula ]]; then
-  sed -i '/@theme /c\@theme "~/.config/rofi/themes/dracula-rounded.rasi"' $config
+  sed -i '/theme=/c\theme="dracula"' $launcher
+  sed -i '/theme=/c\theme="dracula"' $powermenu
+  sed -i '/theme=/c\theme="dracula"' $menu
 elif [[ "$theme" = Gruvbox ]]; then
-  sed -i '/@theme /c\@theme "~/.config/rofi/themes/gruvbox-rounded.rasi"' $config
+  sed -i '/theme=/c\theme="gruvbox"' $launcher
+  sed -i '/theme=/c\theme="gruvbox"' $powermenu
+  sed -i '/theme=/c\theme="gruvbox"' $menu
 elif [[ "$theme" = Monokai-Pro ]]; then
-  sed -i '/@theme /c\@theme "~/.config/rofi/themes/monokai-pro-rounded.rasi"' $config
+  sed -i '/theme=/c\theme="monokai"' $launcher
+  sed -i '/theme=/c\theme="monokai"' $powermenu
+  sed -i '/theme=/c\theme="monokai"' $menu
 elif [[ "$theme" = Nord ]]; then
-  sed -i '/@theme /c\@theme "~/.config/rofi/themes/nord-rounded.rasi"' $config
+  sed -i '/theme=/c\theme="nord"' $launcher
+  sed -i '/theme=/c\theme="nord"' $powermenu
+  sed -i '/theme=/c\theme="nord"' $menu
 elif [[ "$theme" = TokyoNight ]]; then
-  sed -i '/@theme /c\@theme "~/.config/rofi/themes/tokyo-night-rounded.rasi"' $config
+  sed -i '/theme=/c\theme="tokyo-night"' $launcher
+  sed -i '/theme=/c\theme="tokyo-night"' $powermenu
+  sed -i '/theme=/c\theme="tokyo-night"' $menu
 fi
 

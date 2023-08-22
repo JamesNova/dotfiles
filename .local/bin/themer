@@ -11,13 +11,12 @@ declare -a themes=(
 "Quit"
 )
 
-choice=$(printf '%s\n' "${themes[@]}" | rofi -dmenu -i -p "Themes ")
+choice=$(printf '%s\n' "${themes[@]}" | /home/nova/.config/rofi/menu.sh)
 if [[ -f "~/.theme" ]]; then
     rm ~/.theme
 fi
 
 touch ~/.theme
-echo "#! /bin/sh" > ~/.theme
 echo "theme=$choice" > ~/.theme
 
 alathemer

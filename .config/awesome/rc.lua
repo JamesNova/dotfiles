@@ -231,7 +231,7 @@ globalkeys = gears.table.join(
 
     -- Rofi
     awful.key({ modkey },            "space",     function () 
-    awful.util.spawn("rofi -show drun") end,
+    awful.util.spawn("bash /home/nova/.config/rofi/launcher.sh") end,
               {description = "run rofi apps", group = "nova"}),
     awful.key({ modkey },            "k",     function () 
     awful.util.spawn("rofi -show calc") end,
@@ -240,7 +240,7 @@ globalkeys = gears.table.join(
     awful.util.spawn("rofi -show run") end,
               {description = "run rofi command launcher", group = "nova"}),
     awful.key({ modkey, "Control" },   "q",     function () 
-    awful.util.spawn("powermenu") end,
+    awful.util.spawn("bash /home/nova/.config/rofi/powermenu.sh") end,
               {description = "run rofi powermenu", group = "nova"}),
 
     -- Firefox
@@ -415,7 +415,7 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- Autostart
 awful.spawn.with_shell("~/.config/polybar/launch.sh")
 awful.spawn.with_shell("nm-applet")
-awful.spawn.with_shell("pkill pulseaudio pipewire pipewire-pulse pipewire-alsa")
--- awful.spawn.with_shell("pulseaudio --start")
+awful.spawn.with_shell("pkill pulseaudio && pkill pipewire && pkill pipewire-pulse && pkill pipewire-alsa && pkill wireplumber")
+awful.spawn.with_shell("pulseaudio --start")
 -- awful.spawn.with_shell("pulseaudio --start")
 awful.spawn.with_shell("pkill ncmpcpp | alacritty --class 'mus,mus' -e ncmpcpp")
