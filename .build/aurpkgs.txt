@@ -4,3 +4,4 @@ pfetch
 betterlockscreen
 xinit-xsession
 gnome-themes-extra
+cava-git

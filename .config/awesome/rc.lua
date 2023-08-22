@@ -390,6 +390,15 @@ awful.rules.rules = {
     { rule = { instance = "qalculate" },
       properties = { floating = true } },
 
+    { rule = { class = "vis" },
+      properties = { floating = true,
+                     width = 700,
+                     height = 400 } },
+
+    { rule = { class = "Yad" },
+      properties = { floating = true,
+                     callback = function(c) awful.placement.under_mouse(c) awful.placement.no_offscreen(c) end, } },
+
     { rule = { class = "mus" },
       properties = { tag = "9",
                      floating = true } },

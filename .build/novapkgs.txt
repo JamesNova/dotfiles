@@ -29,6 +29,9 @@ lxsession
 lxappearance
 qalculate-gtk
 
+yad
+xdotool
+
 maim
 viewnior
 xdg-user-dirs
