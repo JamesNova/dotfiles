@@ -3,6 +3,8 @@
 launcher="$HOME/.config/rofi/launcher.sh"
 powermenu="$HOME/.config/rofi/powermenu.sh"
 menu="$HOME/.config/rofi/menu.sh"
+screenshot="$HOME/.config/rofi/screenshot.sh"
+quicklinks="$HOME/.config/rofi/quicklinks.sh"
 source ~/.theme
 
 if [[ "$theme" = Quit ]]; then
@@ -11,21 +13,31 @@ elif [[ "$theme" = Dracula ]]; then
   sed -i '/theme=/c\theme="dracula"' $launcher
   sed -i '/theme=/c\theme="dracula"' $powermenu
   sed -i '/theme=/c\theme="dracula"' $menu
+  sed -i '/style=/c\style="dracula.rasi"' $screenshot
+  sed -i '/style=/c\style="dracula.rasi"' $quicklinks
 elif [[ "$theme" = Gruvbox ]]; then
   sed -i '/theme=/c\theme="gruvbox"' $launcher
   sed -i '/theme=/c\theme="gruvbox"' $powermenu
   sed -i '/theme=/c\theme="gruvbox"' $menu
+  sed -i '/style=/c\style="gruvbox.rasi"' $screenshot
+  sed -i '/style=/c\style="gruvbox.rasi"' $quicklinks
 elif [[ "$theme" = Monokai-Pro ]]; then
   sed -i '/theme=/c\theme="monokai"' $launcher
   sed -i '/theme=/c\theme="monokai"' $powermenu
   sed -i '/theme=/c\theme="monokai"' $menu
+  sed -i '/style=/c\style="monokai.rasi"' $screenshot
+  sed -i '/style=/c\style="monokai.rasi"' $quicklinks
 elif [[ "$theme" = Nord ]]; then
   sed -i '/theme=/c\theme="nord"' $launcher
   sed -i '/theme=/c\theme="nord"' $powermenu
   sed -i '/theme=/c\theme="nord"' $menu
+  sed -i '/style=/c\style="nord.rasi"' $screenshot
+  sed -i '/style=/c\style="nord.rasi"' $quicklinks
 elif [[ "$theme" = TokyoNight ]]; then
   sed -i '/theme=/c\theme="tokyo-night"' $launcher
   sed -i '/theme=/c\theme="tokyo-night"' $powermenu
   sed -i '/theme=/c\theme="tokyo-night"' $menu
+  sed -i '/style=/c\style="tokyo-night.rasi"' $screenshot
+  sed -i '/style=/c\style="tokyo-night.rasi"' $quicklinks
 fi
 

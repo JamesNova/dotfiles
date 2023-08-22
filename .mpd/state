@@ -2,8 +2,8 @@ sw_volume: 96
 audio_device_state:1:pulse audio
 audio_device_state:1:Visualizer feed
 state: pause
-current: 24
-time: 72.893000
+current: 60
+time: 143.365000
 random: 1
 repeat: 1
 single: 0
@@ -36,59 +36,58 @@ playlist_begin
 21:Beach House - Space Song.mp3
 22:Beach Weather - Sex, Drugs, Etc..mp3
 23:Blackbear - IDFC.mp3
-24:Cigarettes After Sex - Apocalypse.mp3
-25:Joji - Slow Dancing In The Dark.mp3
-26:Kid Cudi - Mr. Rager.mp3
-27:Kavinsky - Nightcall.mp3
-28:Keane - Somewhere Only We Know.mp3
-29:M83 - Midnight City.mp3
-30:Mareux - The Perfect Girl.mp3
-31:Mr.Kitty - After Dark.mp3
-32:Phantogram - Black Out Days.mp3
-33:Surf Curse - Freaks.mp3
-34:The Neighbourhood - Afraid.mp3
-35:The Neighbourhood - Daddy Issues.mp3
-36:The Neighbourhood - Reflections.mp3
-37:Tom Odell - Another Love.mp3
-38:Vance Joy - Riptide.mp3
-39:The Neighbourhood - Daddy Issues.mp3
-40:Pixies - Where Is My Mind (Cover).mp3
-41:Artic Monkey - 505.mp3
-42:Beach House - Space Song.mp3
-43:Blackbear - IDFC.mp3
-44:Cigarettes After Sex - Apocalypse.mp3
-45:Izzamuzzic - Shootout.mp3
-46:Joji - Slow Dancing In The Dark.mp3
-47:Kid Cudi - Mr. Rager.mp3
-48:Keane - Somewhere Only We Know.mp3
-49:Mac DeMarco - Chamber of Reflection.mp3
-50:Mareux - The Perfect Girl.mp3
-51:Mr.Kitty - After Dark.mp3
-52:Phantogram - Black Out Days.mp3
-53:Surf Curse - Freaks.mp3
-54:The Neighbourhood - Afraid.mp3
-55:The Neighbourhood - Daddy Issues.mp3
-56:The Neighbourhood - Reflections.mp3
-57:The Neighbourhood - Daddy Issues.mp3
-58:Harmless - Swing Lynn.mp3
-59:Beach Weather - Sex, Drugs, Etc..mp3
-60:Cigarettes After Sex - Apocalypse.mp3
-61:Daft Punk - Get Lucky.mp3
-62:Izzamuzzic - Shootout.mp3
-63:Joji - Slow Dancing In The Dark.mp3
-64:Kid Cudi - Mr. Rager.mp3
-65:M83 - Midnight City.mp3
-66:Mac DeMarco - Chamber of Reflection.mp3
-67:Mareux - The Perfect Girl.mp3
-68:Mr.Kitty - After Dark.mp3
-69:Phantogram - Black Out Days.mp3
-70:Rihanna - Diamonds.mp3
-71:Surf Curse - Freaks.mp3
-72:The Neighbourhood - Afraid.mp3
-73:The Neighbourhood - Daddy Issues.mp3
-74:The Neighbourhood - Reflections.mp3
-75:The Neighbourhood - Sweater Weather.mp3
-76:The Neighbourhood - Daddy Issues.mp3
-77:Pixies - Where Is My Mind (Cover).mp3
-78:Harmless - Swing Lynn.mp3
+24:Joji - Slow Dancing In The Dark.mp3
+25:Kid Cudi - Mr. Rager.mp3
+26:Kavinsky - Nightcall.mp3
+27:Keane - Somewhere Only We Know.mp3
+28:M83 - Midnight City.mp3
+29:Mareux - The Perfect Girl.mp3
+30:Mr.Kitty - After Dark.mp3
+31:Phantogram - Black Out Days.mp3
+32:Surf Curse - Freaks.mp3
+33:The Neighbourhood - Afraid.mp3
+34:The Neighbourhood - Daddy Issues.mp3
+35:The Neighbourhood - Reflections.mp3
+36:Tom Odell - Another Love.mp3
+37:Vance Joy - Riptide.mp3
+38:The Neighbourhood - Daddy Issues.mp3
+39:Pixies - Where Is My Mind (Cover).mp3
+40:Artic Monkey - 505.mp3
+41:Beach House - Space Song.mp3
+42:Blackbear - IDFC.mp3
+43:Cigarettes After Sex - Apocalypse.mp3
+44:Izzamuzzic - Shootout.mp3
+45:Joji - Slow Dancing In The Dark.mp3
+46:Kid Cudi - Mr. Rager.mp3
+47:Keane - Somewhere Only We Know.mp3
+48:Mac DeMarco - Chamber of Reflection.mp3
+49:Mareux - The Perfect Girl.mp3
+50:Mr.Kitty - After Dark.mp3
+51:Phantogram - Black Out Days.mp3
+52:Surf Curse - Freaks.mp3
+53:The Neighbourhood - Afraid.mp3
+54:The Neighbourhood - Daddy Issues.mp3
+55:The Neighbourhood - Reflections.mp3
+56:The Neighbourhood - Daddy Issues.mp3
+57:Harmless - Swing Lynn.mp3
+58:Beach Weather - Sex, Drugs, Etc..mp3
+59:Cigarettes After Sex - Apocalypse.mp3
+60:Daft Punk - Get Lucky.mp3
+61:Izzamuzzic - Shootout.mp3
+62:Joji - Slow Dancing In The Dark.mp3
+63:Kid Cudi - Mr. Rager.mp3
+64:M83 - Midnight City.mp3
+65:Mac DeMarco - Chamber of Reflection.mp3
+66:Mareux - The Perfect Girl.mp3
+67:Mr.Kitty - After Dark.mp3
+68:Phantogram - Black Out Days.mp3
+69:Rihanna - Diamonds.mp3
+70:Surf Curse - Freaks.mp3
+71:The Neighbourhood - Afraid.mp3
+72:The Neighbourhood - Daddy Issues.mp3
+73:The Neighbourhood - Reflections.mp3
+74:The Neighbourhood - Sweater Weather.mp3
+75:The Neighbourhood - Daddy Issues.mp3
+76:Pixies - Where Is My Mind (Cover).mp3
+77:Harmless - Swing Lynn.mp3
 playlist_end

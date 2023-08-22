@@ -13,13 +13,40 @@ declare -a themes=(
 
 choice=$(printf '%s\n' "${themes[@]}" | /home/nova/.config/rofi/menu.sh)
 if [[ -f "~/.theme" ]]; then
+    cp ~/.theme ~/.theme.bak
     rm ~/.theme
 fi
 
 touch ~/.theme
-echo "theme=$choice" > ~/.theme
+
+case $choice in
+    Dracula)
+    echo "theme=$choice" > ~/.theme
+    ;;
+    Gruvbox)
+    echo "theme=$choice" > ~/.theme
+    ;;
+    Monokai-Pro)
+    echo "theme=$choice" > ~/.theme
+    ;;
+    Nord)
+    echo "theme=$choice" > ~/.theme
+    ;;
+    TokyoNight)
+    echo "theme=$choice" > ~/.theme
+    ;;
+    *)
+        if [[ -f "~/.theme" ]]; then
+            mv ~/.theme.bak ~/.theme
+            exit 1
+        else
+            exit 1
+        fi
+    ;;
+esac
 
 alathemer
+kittythemer
 nvimthemer
 polythemer
 rofithemer

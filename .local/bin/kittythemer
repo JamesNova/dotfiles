@@ -6,13 +6,13 @@ source ~/.theme
 if [[ "$theme" = Quit ]]; then
   echo "No Theme Chosen" && exit 1
 elif [[ "$theme" = Dracula ]]; then
-  sed -i '/include /c\include dracula' $config
+  sed -i '/include /c\include themes/dracula.conf' $config
 elif [[ "$theme" = Gruvbox ]]; then
-  sed -i '/include /c\include gruvbox' $config
+  sed -i '/include /c\include themes/gruvbox.conf' $config
 elif [[ "$theme" = Monokai-Pro ]]; then
-  sed -i '/include /c\include monokai' $config
+  sed -i '/include /c\include themes/monokai.conf' $config
 elif [[ "$theme" = Nord ]]; then
-  sed -i '/include /c\include nord' $config
+  sed -i '/include /c\include themes/nord.conf' $config
 elif [[ "$theme" = TokyoNight ]]; then
-  sed -i '/include /c\include tokyo-night' $config
+  sed -i '/include /c\include themes/tokyo-night.conf' $config
 fi

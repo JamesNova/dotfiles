@@ -10,20 +10,25 @@ elif [[ "$theme" = Dracula ]]; then
   sed -i '/primary =/c\primary = #BD93F9' $config
   sed -i '/background = /c\background = #DD282A36' $config
   sed -i '/background-alt = /c\background-alt = #DD282A36' $config
+  sed -i '/foreground = /c\foreground = #bfbfbf' $config
 elif [[ "$theme" = Gruvbox ]]; then
-  sed -i '/primary =/c\primary = #D79921' $config
+  sed -i '/primary =/c\primary = #EBDBB2' $config
   sed -i '/background = /c\background = #DD282828' $config
   sed -i '/background-alt = /c\background-alt = #DD282828' $config
+  sed -i '/foreground = /c\foreground = #a89984' $config
 elif [[ "$theme" = Monokai-Pro ]]; then
   sed -i '/primary =/c\primary = #FFD866' $config
   sed -i '/background = /c\background = #DD2D2A2E' $config
   sed -i '/background-alt = /c\background-alt = #DD2D2A2E' $config
+  sed -i '/foreground = /c\foreground = #fcfcfa' $config
 elif [[ "$theme" = Nord ]]; then
   sed -i '/primary =/c\primary = #81A1C1' $config
   sed -i '/background = /c\background = #DD2E3440' $config
   sed -i '/background-alt = /c\background-alt = #DD2E3440' $config
+  sed -i '/foreground = /c\foreground = #e5e9f0' $config
 elif [[ "$theme" = TokyoNight ]]; then
-  sed -i '/primary =/c\primary = #449DAB' $config
+  sed -i '/primary =/c\primary = #7aa2f7' $config
   sed -i '/background = /c\background = #DD1a1b26' $config
   sed -i '/background-alt = /c\background-alt = #DD1a1b26' $config
+  sed -i '/foreground = /c\foreground = #a9b1d6' $config
 fi

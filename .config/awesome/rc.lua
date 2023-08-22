@@ -415,7 +415,7 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- Autostart
 awful.spawn.with_shell("~/.config/polybar/launch.sh")
 awful.spawn.with_shell("nm-applet")
-awful.spawn.with_shell("pkill pulseaudio && pkill pipewire && pkill pipewire-pulse && pkill pipewire-alsa && pkill wireplumber")
+awful.spawn.with_shell("pkill pulseaudio && pkill pipewire && pkill pipewire-pulse && pkill pipewire-alsa && pkill wireplumber &")
 awful.spawn.with_shell("pulseaudio --start")
 -- awful.spawn.with_shell("pulseaudio --start")
 awful.spawn.with_shell("pkill ncmpcpp | alacritty --class 'mus,mus' -e ncmpcpp")

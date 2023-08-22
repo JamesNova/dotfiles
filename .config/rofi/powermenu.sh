@@ -10,7 +10,7 @@
 ## style-1   style-2   style-3   style-4   style-5
 
 # Current Theme
-dir="$HOME/.config/rofi/powermenu/type-6"
+dir="$HOME/.config/rofi/powermenu/powermenu"
 theme="gruvbox"
 
 # CMDs
@@ -70,7 +70,7 @@ run_cmd() {
 		elif [[ $1 == '--logout' ]]; then
 			if [[ "$DESKTOP_SESSION" == 'openbox' ]]; then
 				openbox --exit
-			elif [[ "$DESKTOP_SESSION" == 'awesome' ]]; then
+            elif [[ "$DESKTOP_SESSION" == 'awesome' ]]; then
                 echo 'awesome.quit()' | awesome-client
 			elif [[ "$DESKTOP_SESSION" == 'bspwm' ]]; then
 				bspc quit
@@ -78,6 +78,8 @@ run_cmd() {
 				i3-msg exit
 			elif [[ "$DESKTOP_SESSION" == 'plasma' ]]; then
 				qdbus org.kde.ksmserver /KSMServer logout 0 0 0
+            elif [[ "$DESKTOP_SESSION" == 'xinitrc' ]]; then   #Special case (for me)
+                echo 'awesome.quit()' | awesome-client         # Feel free to change it or delete it
 			fi
 		fi
 	else
@@ -95,11 +97,7 @@ case ${chosen} in
 		run_cmd --reboot
         ;;
     $lock)
-		if [[ -x '/usr/bin/betterlockscreen' ]]; then
-			betterlockscreen -l
-		elif [[ -x '/usr/bin/i3lock' ]]; then
-			i3lock
-		fi
+		betterlockscreen -l
         ;;
     $logout)
 		run_cmd --logout

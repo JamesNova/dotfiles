@@ -28,6 +28,10 @@ xorg-xrandr
 lxsession
 lxappearance
 
+maim
+viewnior
+xdg-user-dirs
+
 alsa-utils
 alsa-plugins
 pulseaudio
