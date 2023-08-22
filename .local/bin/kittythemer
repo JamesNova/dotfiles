@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+config="$HOME/.config/kitty/kitty.conf"
+source ~/.theme
+
+if [[ "$theme" = Quit ]]; then
+  echo "No Theme Chosen" && exit 1
+elif [[ "$theme" = Dracula ]]; then
+  sed -i '/include /c\include dracula' $config
+elif [[ "$theme" = Gruvbox ]]; then
+  sed -i '/include /c\include gruvbox' $config
+elif [[ "$theme" = Monokai-Pro ]]; then
+  sed -i '/include /c\include monokai' $config
+elif [[ "$theme" = Nord ]]; then
+  sed -i '/include /c\include nord' $config
+elif [[ "$theme" = TokyoNight ]]; then
+  sed -i '/include /c\include tokyo-night' $config
+fi

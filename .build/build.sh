@@ -124,6 +124,7 @@ esac
 source $HOME/.theme
 $HOME/.local/bin/exportlocal
 $HOME/.local/bin/alathemer
+$HOME/.local/bin/kittythemer
 $HOME/.local/bin/awmthemer
 $HOME/.local/bin/rofithemer
 $HOME/.local/bin/polythemer

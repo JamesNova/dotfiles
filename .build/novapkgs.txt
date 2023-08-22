@@ -13,6 +13,7 @@ ttf-roboto-mono-nerd
 ttf-ubuntu-font-family
 
 alacritty
+kitty
 exa
 feh
 firefox
