@@ -234,12 +234,15 @@ globalkeys = gears.table.join(
     awful.util.spawn("bash /home/nova/.config/rofi/launcher.sh") end,
               {description = "run rofi apps", group = "nova"}),
     awful.key({ modkey },            "k",     function () 
-    awful.util.spawn("rofi -show calc") end,
-              {description = "run rofi calculator", group = "nova"}),
-    awful.key({ modkey },            "r",     function () 
-    awful.util.spawn("rofi -show run") end,
-              {description = "run rofi command launcher", group = "nova"}),
-    awful.key({ modkey, "Control" },   "q",     function () 
+    awful.util.spawn("qalculate-gtk --title=qalculate") end,
+              {description = "run qalculate calculator", group = "nova"}),
+    awful.key({ modkey },            "q",     function () 
+    awful.util.spawn("bash /home/nova/.config/rofi/quicklinks.sh") end,
+              {description = "run rofi quicklinks launcher", group = "nova"}),
+    awful.key({ modkey, "Shift" },   "s",     function () 
+    awful.util.spawn("bash /home/nova/.config/rofi/screenshot.sh") end,
+              {description = "run rofi screenshots", group = "nova"}),
+    awful.key({ modkey, "Control" }, "q",     function () 
     awful.util.spawn("bash /home/nova/.config/rofi/powermenu.sh") end,
               {description = "run rofi powermenu", group = "nova"}),
 
@@ -382,7 +385,10 @@ awful.rules.rules = {
       }, properties = { floating = true }},
 
     { rule = { class = "firefox" },
-      properties = { tag = "2" } },
+      properties = { tag = "2", switchtotag = true } },
+
+    { rule = { instance = "qalculate" },
+      properties = { floating = true } },
 
     { rule = { class = "mus" },
       properties = { tag = "9",

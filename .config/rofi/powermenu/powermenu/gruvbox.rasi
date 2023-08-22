@@ -20,7 +20,7 @@ configuration {
     foreground:                  #FFFFFF;
     foregroundblack:             #282828;
     selected:                    #ebdbb2;
-    active:                      #98971a;
+    active:                      #ebdbb2;
     urgent:                      #a89984;
 }
 

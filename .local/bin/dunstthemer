@@ -1,24 +1,29 @@
 #!/usr/bin/env bash
 
-config="$HOME/.config/polybar/themes.ini"
+config="$HOME/.config/dunst/dunstrc"
 
 source ~/.theme
 
 if [[ "$theme" = Quit ]]; then
   echo "No Theme Chosen" && exit 1
 elif [[ "$theme" = Dracula ]]; then
-  sed -i '/primary =/c\primary = #BD93F9' $config
-  sed -i '/background = /c\background = #282A36' $config
+  sed -i '/frame_color =/c\    frame_color = "#BD93F9"' $config
+  sed -i '/background = /c\    background = "#282A36"' $config
+  sed -i '/foreground = /c\    foreground = "#bfbfbf"' $config
 elif [[ "$theme" = Gruvbox ]]; then
-  sed -i '/primary =/c\primary = #D79921' $config
-  sed -i '/background = /c\background = #282828' $config
+  sed -i '/frame_color =/c\    frame_color = "#EBDBB2"' $config
+  sed -i '/background = /c\    background = "#282828"' $config
+  sed -i '/foreground = /c\    foreground = "#a89984"' $config
 elif [[ "$theme" = Monokai-Pro ]]; then
-  sed -i '/primary =/c\primary = #FFD866' $config
-  sed -i '/background = /c\background = #2D2A2E' $config
+  sed -i '/frame_color =/c\    frame_color = "#FFD866"' $config
+  sed -i '/background = /c\    background = "#2D2A2E"' $config
+  sed -i '/foreground = /c\    foreground = "#fcfcfa"' $config
 elif [[ "$theme" = Nord ]]; then
-  sed -i '/primary =/c\primary = #81A1C1' $config
-  sed -i '/background = /c\background = #2E3440' $config
+  sed -i '/frame_color =/c\    frame_color = "#81A1C1"' $config
+  sed -i '/background = /c\    background = "#2E3440"' $config
+  sed -i '/foreground = /c\    foreground = "#e5e9f0"' $config
 elif [[ "$theme" = TokyoNight ]]; then
-  sed -i '/primary =/c\primary = #449DAB' $config
-  sed -i '/background = /c\background = #1a1b26' $config
+  sed -i '/frame_color =/c\    frame_color = "#7aa2f7"' $config
+  sed -i '/background = /c\    background = "#1a1b26"' $config
+  sed -i '/foreground = /c\    foreground = "#a9b1d6"' $config
 fi

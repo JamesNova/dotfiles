@@ -20,8 +20,8 @@ configuration {
     foreground:                  #fcfcfa;
     foregroundblack:             #403e41;
     selected:                    #FFD866;
-    active:                      #a9dc76;
-    urgent:                      #FFD966;
+    active:                      #FFD966;
+    urgent:                      #a9dc76;
 }
 
 /*

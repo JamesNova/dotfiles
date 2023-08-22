@@ -46,6 +46,7 @@ case $choice in
 esac
 
 alathemer
+bash /bin/dunstthemer
 kittythemer
 nvimthemer
 polythemer

@@ -27,6 +27,7 @@ base-devel
 xorg-xrandr
 lxsession
 lxappearance
+qalculate-gtk
 
 maim
 viewnior
