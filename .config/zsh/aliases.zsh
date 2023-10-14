@@ -77,6 +77,9 @@ alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
 alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
 alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out.'"
 
+# utils
+alias cat="bat -f"
+
 # music
 alias ytaudio="yt-dlp --extract-audio --audio-format mp3 -P ~/Music"
 alias vis="ncmpcpp -s visualizer"

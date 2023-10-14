@@ -5,6 +5,8 @@
 #  \___/|_| \_|
 #
 
+source ~/.theme
+
 ## Startx automaticaly after login in tty1
 if [[ $(tty) = /dev/tty1 ]]; then
   startx
@@ -183,6 +185,21 @@ alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out.'"
 # music
 alias ytaudio="yt-dlp --extract-audio --audio-format mp3 -P ~/Music"
 alias vis="ncmpcpp -s visualizer"
+
+# utils
+case $theme in
+    Dracula) export BAT_THEME="Dracula"
+    ;;
+    Gruvbox) export BAT_THEME="gruvbox-dark"
+    ;;
+    Monokai-Pro) export BAT_THEME="Monokai Extended Origin"
+    ;;
+    Nord) export BAT_THEME="Nord"
+    ;;
+    TokyoNight) export BAT_THEME="OneHalfDark"
+    ;;
+esac
+alias cat="bat -f"
 
 # fing
 alias fpc="fpc -Co -Cr -Miso -gl"

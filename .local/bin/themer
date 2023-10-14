@@ -51,7 +51,7 @@ kittythemer
 nvimthemer
 polythemer
 rofithemer
-walltheme
+# walltheme
 
 case $SESSION in
     awesome)

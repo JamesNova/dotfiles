@@ -7,7 +7,7 @@
 
 # Import Current Theme
 type="$HOME/.config/rofi/applets/screenshot"
-style="gruvbox.rasi"
+style="tokyo-night.rasi"
 theme="$type/$style"
 
 # Theme Elements

@@ -1,5 +1,7 @@
 #!/bin/sh
 
+source ~/.theme
+
 ### EXPORT
 export TERM="xterm-256color"                      # getting proper colors
 export HISTCONTROL=ignoredups:erasedups           # no duplicate entries
@@ -22,6 +24,19 @@ fi
 if [ -d "$HOME/Applications" ] ;
   then PATH="$HOME/Applications:$PATH"
 fi
+
+case $theme in
+    Dracula) export BAT_THEME="Dracula"
+    ;;
+    Gruvbox) export BAT_THEME="gruvbox-dark"
+    ;;
+    Monokai-Pro) export BAT_THEME="Monokai Extended Origin"
+    ;;
+    Nord) export BAT_THEME="Nord"
+    ;;
+    TokyoNight) export BAT_THEME="OneHalfDark"
+    ;;
+esac
 
 ### CHANGE TITLE OF TERMINALS
 case ${TERM} in

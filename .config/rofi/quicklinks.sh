@@ -7,7 +7,7 @@
 
 # Import Current Theme
 type="$HOME/.config/rofi/applets/quicklinks"
-style="gruvbox.rasi"
+style="tokyo-night.rasi"
 theme="$type/$style"
 
 BROWSER=firefox

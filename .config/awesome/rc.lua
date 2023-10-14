@@ -45,7 +45,7 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init("~/.config/awesome/themes/gruvbox/theme.lua")
+beautiful.init("~/.config/awesome/themes/tokyo-night/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "kitty"
@@ -225,39 +225,45 @@ globalkeys = gears.table.join(
               {description = "select previous", group = "layout"}),
 
     -- Theme
-    awful.key({ modkey, "Control" },   "t",     function () 
+    awful.key({ modkey, "Control" },   "t",     function ()
     awful.util.spawn("themer") end,
               {description = "Theme Selector", group = "nova"}),
 
     -- Rofi
-    awful.key({ modkey },            "space",     function () 
+    awful.key({ modkey },            "space",     function ()
     awful.util.spawn("bash /home/nova/.config/rofi/launcher.sh") end,
               {description = "run rofi apps", group = "nova"}),
-    awful.key({ modkey },            "k",     function () 
+    awful.key({ modkey },            "k",     function ()
     awful.util.spawn("qalculate-gtk --title=qalculate") end,
               {description = "run qalculate calculator", group = "nova"}),
-    awful.key({ modkey },            "q",     function () 
+    awful.key({ modkey },            "q",     function ()
     awful.util.spawn("bash /home/nova/.config/rofi/quicklinks.sh") end,
               {description = "run rofi quicklinks launcher", group = "nova"}),
-    awful.key({ modkey, "Shift" },   "s",     function () 
+    awful.key({ modkey, "Shift" },   "s",     function ()
     awful.util.spawn("bash /home/nova/.config/rofi/screenshot.sh") end,
               {description = "run rofi screenshots", group = "nova"}),
-    awful.key({ modkey, "Control" }, "q",     function () 
+    awful.key({ modkey, "Control" }, "q",     function ()
     awful.util.spawn("bash /home/nova/.config/rofi/powermenu.sh") end,
               {description = "run rofi powermenu", group = "nova"}),
 
     -- Firefox
-    awful.key({ modkey },            "b",     function () 
+    awful.key({ modkey },            "b",     function ()
     awful.util.spawn("firefox") end,
               {description = "run firefox", group = "nova"}),
 
     -- Wallpapers
-    awful.key({ modkey, "Shift" },   "w",     function () 
+    awful.key({ modkey, "Shift" },   "w",     function ()
+    awful.util.spawn("wall-d -d /usr/share/backgrounds/wallpapers-novaos") end,
+              {description = "wallpaper selector", group = "nova"}),
+    awful.key({ modkey, "Shift" },   "t",     function ()
+    awful.util.spawn("wall-d -t") end,
+              {description = "wallpaper selector for the theme", group = "nova"}),
+    awful.key({ modkey, "Shift" },   "r",     function ()
     awful.util.spawn("wallrandom") end,
               {description = "random wallpaper", group = "nova"}),
-    awful.key({ modkey, "Shift" },   "t",     function () 
-    awful.util.spawn("walltheme") end,
-              {description = "random wallpaper corresponding to the theme", group = "nova"}),
+    awful.key({ modkey, "Shift" },   "a",     function ()
+    awful.util.spawn("wallrandom") end,
+              {description = "random wallpaper with the theme", group = "nova"}),
 
     -- Scratchapds
     awful.key({modkey , "Shift"},"p" , function(c)
@@ -390,6 +396,9 @@ awful.rules.rules = {
     { rule = { instance = "qalculate" },
       properties = { floating = true } },
 
+    { rule = { instance = "sxiv" },
+      properties = { floating = true } },
+
     { rule = { class = "vis" },
       properties = { floating = true,
                      width = 700,
@@ -428,9 +437,13 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- }}}
 
 -- Autostart
+-- awful.spawn.with_shell("xrandr --output DP-0 --mode 1920x1080 --rate 144")
+-- awful.spawn.with_shell("picom -b")
 awful.spawn.with_shell("~/.config/polybar/launch.sh")
-awful.spawn.with_shell("nm-applet")
+-- awful.spawn.with_shell("nm-applet")
 awful.spawn.with_shell("pkill pulseaudio && pkill pipewire && pkill pipewire-pulse && pkill pipewire-alsa && pkill wireplumber &")
 awful.spawn.with_shell("pulseaudio --start")
--- awful.spawn.with_shell("pulseaudio --start")
+-- awful.spawn.with_shell("dunst &")
+-- awful.spawn.with_shell("bash /home/nova/.fehbg")
+-- awful.spawn.with_shell("unclutter &")
 awful.spawn.with_shell("pkill ncmpcpp | alacritty --class 'mus,mus' -e ncmpcpp")
